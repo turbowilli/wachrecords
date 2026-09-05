@@ -59,7 +59,8 @@ function loadHome(c) {
       setCaption(figure.querySelector('.caption'), item);
     });
   });
-  document.querySelector('.quote p').textContent = c.quote;
+  const quote = document.querySelector('.quote p');
+  if (quote) quote.textContent = c.quote;
   const mag = c.magazine;
   const magSection = document.querySelector('.magazine');
   if (magSection) {
@@ -73,19 +74,18 @@ function loadHome(c) {
 }
 
 function loadWork(c) {
-  document.querySelector('.page-hero .section-kicker').textContent = c.kicker;
-  document.querySelector('.page-title').textContent = c.title;
-  document.querySelector('.page-hero p').textContent = c.intro;
-  document.querySelectorAll('.work-card').forEach((card, i) => {
-    const item = c.items[i];
-    if (!item) return;
-    const img = card.querySelector('img');
-    img.src = imagePath(`${item.image}.webp`);
-    img.alt = item.alt;
-    const spans = card.querySelectorAll('.caption span');
-    if (spans[0]) spans[0].textContent = item.title;
-    if (spans[1]) spans[1].textContent = item.number;
-  });
+  const grid = document.querySelector('#work-grid');
+  if (!grid) return;
+
+  grid.innerHTML = c.items.map((item) => `
+    <figure class="work-card reveal">
+      <picture>
+        <source srcset="${imagePath(`${item.image}.webp`)}" type="image/webp">
+        <img src="${imagePath(`${item.image}.jpg`)}" alt="${item.alt || item.title || 'Fotografische Arbeit'}" loading="lazy">
+      </picture>
+      <figcaption class="caption"><span>${item.title || ''}</span><span>${item.number || ''}</span></figcaption>
+    </figure>
+  `).join('');
 }
 
 function loadPage(page, c) {
@@ -120,8 +120,9 @@ function loadPage(page, c) {
   }
   if (page === 'contact') {
     const block = document.querySelector('.contact-block');
-    block.innerHTML = c.email.replace(/\n/g, '<br>');
-    document.querySelector('.text-page p').textContent = c.note;
+    if (block) block.innerHTML = c.email.replace(/\n/g, '<br>');
+    const note = document.querySelector('.text-page p');
+    if (note) note.textContent = c.note;
   }
 }
 
