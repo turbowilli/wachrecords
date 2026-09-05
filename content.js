@@ -18,12 +18,12 @@ const siteContent = {
     intro: "Fotografische Beobachtungen zwischen Natur, Landschaft, Struktur und Stille.",
     quote: "WACH RECORDS versteht Fotografie als Beobachtung: nah genug für Details, offen genug für Zusammenhänge.",
     magazine: {
-      kicker: "Publication",
-      title: "WACH RECORDS\nIssue 01",
+      kicker: "Publikationen",
+      title: "WACH RECORDS\nLeiferde und das Viehmoor 2026",
       text: "Eine fotografische Publikation von Felix Wach. Die erste Ausgabe verbindet ausgewählte Arbeiten in einem gedruckten, kuratierten Format.",
       meta: ["32 Seiten", "DIN A5", "Klammerheftung", "Limitierte Erstauflage"],
-      linkText: "Issue 01 ansehen →",
-      coverSub: "Issue 01 · Felix Wach"
+      linkText: "Leiferde und das Viehmoor 2026 →",
+      coverSub: "Leiferde und das Viehmoor 2026 · Felix Wach"
     },
     gallery: [
       { image: "fog-tree", number: "01", title: "Landscape", subtitle: "Selected Work" },
@@ -40,7 +40,7 @@ const siteContent = {
     ]
   },
 
-  work: {
+  Arbeiten: {
     kicker: "Felix Wach",
     title: "Selected Work",
     intro: "Eine erste kuratierte Auswahl. Die Struktur ist bewusst offen gehalten, damit später eigenständige Serien wie Nature, Wildlife oder Black & White ergänzt werden können.",
@@ -57,20 +57,20 @@ const siteContent = {
     ]
   },
 
-  magazine: {
-    kicker: "Publication",
-    title: "Issue 01",
+  Zine: {
+    kicker: "Publikation",
+    title: "Leiferde und das Viehmoor 2026",
     intro: "Die erste Ausgabe von WACH RECORDS. Diese Seite ist bereits für Cover, Innenseiten-Vorschau, Preis und Bestellweg vorbereitet; die finalen Angaben können vor Veröffentlichung eingesetzt werden.",
     formatTitle: "Format",
     formatText: "DIN A5, 32 Seiten, Klammerheftung. Die Erstauflage ist als kleine fotografische Publikation konzipiert.",
     orderTitle: "Bestellung",
     orderText: "Der konkrete Preis und Bestellweg sollten erst eingetragen werden, wenn Versandkosten und Zahlungsabwicklung feststehen. Für die erste kleine Auflage reicht eine einfache Bestellung per E-Mail oder ein externer Zahlungslink.",
-    coverSub: "Issue 01 · Felix Wach"
+    coverSub: "Leiferde und das Viehmoor 2026 · Felix Wach"
   },
 
-  exhibitions: {
-    kicker: "Archive / Upcoming",
-    title: "Exhibitions",
+  Ausstellungen: {
+    kicker: "Archive / Kommende",
+    title: "Ausstellungen",
     intro: "Hier können kommende und vergangene Ausstellungen chronologisch geführt werden.",
     currentYear: "2026",
     currentText: "Ausstellungstermine ergänzen.",
@@ -78,8 +78,8 @@ const siteContent = {
     archiveText: "Vergangene Ausstellungen, Beteiligungen und fotografische Präsentationen ergänzen."
   },
 
-  about: {
-    kicker: "About",
+  Über mich: {
+    kicker: "Das bin ich",
     title: "Felix Wach",
     intro: "Fotografische Arbeiten zwischen Naturbeobachtung, Landschaft, grafischer Struktur und stillen Details.",
     sections: [
@@ -88,7 +88,7 @@ const siteContent = {
     ]
   },
 
-  contact: {
+  Kontakt: {
     kicker: "Contact",
     title: "Anfragen",
     intro: "Für Ausstellungen, Publikationen, Zusammenarbeit und fotografische Anfragen.",
