@@ -11,7 +11,7 @@ const siteContent = {
   home: {
     hero: {
       title: "Felix Wach",
-      subtitle: "Photography · WACH RECORDS",
+      subtitle: "Fotografie · WACH RECORDS",
       image: "hero-forest"
     },
     introKicker: "Selected Work",
@@ -42,7 +42,7 @@ const siteContent = {
 
   Arbeiten: {
     kicker: "Felix Wach",
-    title: "Selected Work",
+    title: "Ausgewählte Arbeiten",
     intro: "Eine erste kuratierte Auswahl. Die Struktur ist bewusst offen gehalten, damit später eigenständige Serien wie Nature, Wildlife oder Black & White ergänzt werden können.",
     items: [
       { image: "hero-forest", title: "Forest", number: "01", alt: "Abstrakte Waldaufnahme" },
