@@ -90,15 +90,15 @@ const siteContent = {
     kicker: "Kontakt",
     title: "Anfragen",
     intro: "Für Ausstellungen, Publikationen, Zusammenarbeit und fotografische Anfragen.",
-    email: "E-Mail-Adresse\nhier einsetzen",
-    note: "Die echte geschäftliche E-Mail-Adresse wurde nicht angenommen oder erfunden. Vor Veröffentlichung hier deine gewünschte Adresse eintragen."
+    email: "E-Mail-Adresse\nfoto@wachrecords.de",
+    note: Die echte geschäftliche E-Mail-Adresse wurde nicht angenommen oder erfunden. Vor Veröffentlichung hier deine gewünschte Adresse eintragen."
   },
 
   legal: {
-    provider: "Felix Wach\n[ladungsfähige Anschrift ergänzen]",
-    email: "[E-Mail ergänzen]",
-    phone: "[Telefon, falls erforderlich/gewünscht]",
-    other: "[ggf. Umsatzsteuer-ID, Registerangaben oder sonstige Pflichtangaben ergänzen]",
+    provider: "Felix Wach\nRokamp 6a, 38542 Leiferde",
+    email: "[foto@wachrecords.de]",
+    phone: [Telefon, falls erforderlich/gewünscht],
+    other: [ggf. Umsatzsteuer-ID, Registerangaben oder sonstige Pflichtangaben ergänzen],
     privacyAddress: "[Anschrift ergänzen]",
     privacyEmail: "[E-Mail ergänzen]",
     hosting: "[Hosting-Anbieter und die dort anfallende Server-Log-Verarbeitung ergänzen.]"
