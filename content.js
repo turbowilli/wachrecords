@@ -58,22 +58,22 @@ const siteContent = {
   magazine: {
     kicker: "Publikation",
     title: "Leiferde und das Viehmoor 2026",
-    intro: "Die erste Ausgabe von WACH RECORDS. Diese Seite ist bereits für Cover, Innenseiten-Vorschau, Preis und Bestellweg vorbereitet; die finalen Angaben können vor Veröffentlichung eingesetzt werden.",
+    intro: "Mein erster Versuch eines Zine",
     formatTitle: "Format",
     formatText: "DIN A5, 32 Seiten, Klammerheftung. Die Erstauflage ist als kleine fotografische Publikation konzipiert.",
     orderTitle: "Bestellung",
-    orderText: "Der konkrete Preis und Bestellweg sollten erst eingetragen werden, wenn Versandkosten und Zahlungsabwicklung feststehen. Für die erste kleine Auflage reicht eine einfache Bestellung per E-Mail oder ein externer Zahlungslink.",
+    orderText: "Bestellung per E-Mail",
     coverSub: "Leiferde und das Viehmoor 2026 · Felix Wach"
   },
 
   exhibitions: {
     kicker: "Archiv / Kommende",
     title: "Ausstellungen",
-    intro: "Hier können kommende und vergangene Ausstellungen chronologisch geführt werden.",
+    intro: "Kommende und vergangene Ausstellungen von mir",
     currentYear: "2026",
     currentText: "26./27.09. LeifArt Leiferde",
     archiveTitle: "Archiv",
-    archiveText: "Vergangene Ausstellungen, Beteiligungen und fotografische Präsentationen ergänzen."
+    archiveText: "-"
   },
 
   about: {
