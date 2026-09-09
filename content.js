@@ -24,16 +24,16 @@ const siteContent = {
       coverSub: "Leiferde und das Viehmoor 2026 · Felix Wach"
     },
     gallery: [
-      { image: "fog-tree", number: "01", title: "Landschaft", subtitle: "Ausgewählte Arbeit" },
+      { image: "fog-tree", number: "", title: "", subtitle: "" },
       { image: "new-growth" },
-      { image: "bird-branches", number: "02", title: "Struktur", subtitle: "Natur / Form" },
-      { image: "railway", number: "03", title: "Spur", subtitle: "Mensch / Landschaft" },
+      { image: "bird-branches", number: "", title: "", subtitle: "" },
+      { image: "railway", number: "", title: "", subtitle: "" },
       { image: "morning-field" },
-      { image: "forest-floor", number: "04", title: "Wald", subtitle: "Studie" },
+      { image: "forest-floor", number: "", title: "", subtitle: "" },
       { image: "mushrooms-bw" },
       { image: "treetops" },
-      { image: "golden-field", number: "05", title: "Licht", subtitle: "Feldstudie" },
-      { image: "robin", number: "06", title: "Tierwelt", subtitle: "Beobachtung" },
+      { image: "golden-field", number: "", title: "", subtitle: "" },
+      { image: "robin", number: "", title: "", subtitle: "" },
       { image: "frost-web" }
     ]
   },
