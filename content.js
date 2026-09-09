@@ -1,17 +1,7 @@
-/*
- * WACH RECORDS — zentrale Inhalte
- *
- * HIER kannst du später Texte und Bildauswahl ändern.
- * Bilddateien liegen in: assets/images/
- */
-
+/* WACH RECORDS — zentrale Inhalte */
 const siteContent = {
   home: {
-    hero: {
-      title: "Felix Wach",
-      subtitle: "Fotografie · WACH RECORDS",
-      image: "hero-forest"
-    },
+    hero: { title: "Felix Wach", subtitle: "Fotografie · WACH RECORDS", image: "hero-forest" },
     introKicker: "Ausgewählte Arbeiten",
     intro: "Fotografische Beobachtungen zwischen Natur, Landschaft, Struktur und Stille.",
     quote: "WACH RECORDS versteht Fotografie als Beobachtung: nah genug für Details, offen genug für Zusammenhänge.",
@@ -24,88 +14,51 @@ const siteContent = {
       coverSub: "Leiferde und das Viehmoor 2026 · Felix Wach"
     },
     gallery: [
-      { image: "fog-tree", number: "", title: "", subtitle: "" },
-      { image: "new-growth" },
-      { image: "bird-branches", number: "", title: "", subtitle: "" },
-      { image: "railway", number: "", title: "", subtitle: "" },
-      { image: "morning-field" },
-      { image: "forest-floor", number: "", title: "", subtitle: "" },
-      { image: "mushrooms-bw" },
-      { image: "treetops" },
-      { image: "golden-field", number: "", title: "", subtitle: "" },
-      { image: "robin", number: "", title: "", subtitle: "" },
-      { image: "frost-web" }
+      { image: "fog-tree", number: "", title: "", subtitle: "" }, { image: "new-growth" },
+      { image: "bird-branches", number: "", title: "", subtitle: "" }, { image: "railway", number: "", title: "", subtitle: "" },
+      { image: "morning-field" }, { image: "forest-floor", number: "", title: "", subtitle: "" },
+      { image: "mushrooms-bw" }, { image: "treetops" }, { image: "golden-field", number: "", title: "", subtitle: "" },
+      { image: "robin", number: "", title: "", subtitle: "" }, { image: "frost-web" }
     ]
   },
-
   work: {
-    kicker: "Felix Wach",
-    title: "Ausgewählte Arbeiten",
+    kicker: "Felix Wach", title: "Ausgewählte Arbeiten",
     intro: "Eine erste kuratierte Auswahl. Die Struktur ist bewusst offen gehalten, damit später eigenständige Serien wie Natur, Tierwelt oder Schwarz-Weiß ergänzt werden können.",
     items: [
-      { image: "hero-forest", title: "Wald", number: "01", alt: "Abstrakte Waldaufnahme" },
-      { image: "fog-tree", title: "Landschaft", number: "02", alt: "Baum im Nebel" },
-      { image: "bird-branches", title: "Struktur", number: "03", alt: "Vogel in Ästen" },
-      { image: "railway", title: "Spur", number: "04", alt: "Bahnstrecke" },
-      { image: "morning-field", title: "Licht", number: "05", alt: "Morgennebel" },
-      { image: "forest-floor", title: "Wald", number: "06", alt: "Waldboden" },
-      { image: "mushrooms-bw", title: "Detail", number: "07", alt: "Pilze auf Baumstamm" },
-      { image: "golden-field", title: "Feld", number: "08", alt: "Gräser im Licht" },
+      { image: "hero-forest", title: "Wald", number: "01", alt: "Abstrakte Waldaufnahme" }, { image: "fog-tree", title: "Landschaft", number: "02", alt: "Baum im Nebel" },
+      { image: "bird-branches", title: "Struktur", number: "03", alt: "Vogel in Ästen" }, { image: "railway", title: "Spur", number: "04", alt: "Bahnstrecke" },
+      { image: "morning-field", title: "Licht", number: "05", alt: "Morgennebel" }, { image: "forest-floor", title: "Wald", number: "06", alt: "Waldboden" },
+      { image: "mushrooms-bw", title: "Detail", number: "07", alt: "Pilze auf Baumstamm" }, { image: "golden-field", title: "Feld", number: "08", alt: "Gräser im Licht" },
       { image: "frost-web", title: "Detail", number: "09", alt: "Spinnennetz" }
     ]
   },
-
   magazine: {
-    kicker: "Publikation",
-    title: "Leiferde und das Viehmoor 2026",
-    intro: "Mein erster Versuch eines Zine",
-    previewKicker: "Cover & Innenseite",
-    previewTitle: "Einblicke in die Ausgabe",
+    kicker: "Publikation", title: "Leiferde und das Viehmoor 2026", intro: "Mein erster Versuch eines Zine",
+    previewKicker: "Cover & Innenseite", previewTitle: "Einblicke in die Ausgabe",
     previewText: "Das Cover und ausgewählte Innenseiten geben einen ersten Eindruck vom fotografischen und gestalterischen Aufbau der Publikation.",
-    formatTitle: "Format",
-    formatText: "DIN A5, 32 Seiten, Klammerheftung. Die Erstauflage ist als kleine fotografische Publikation konzipiert.",
-    orderTitle: "Bestellung",
-    orderText: "Bestellung per E-Mail",
-    coverSub: "Leiferde und das Viehmoor 2026 · Felix Wach",
-    preview1Caption: "Innenseite 01",
-    preview2Caption: "Innenseite 02"
+    formatTitle: "Format", formatText: "DIN A5, 32 Seiten, Klammerheftung. Die Erstauflage ist als kleine fotografische Publikation konzipiert.",
+    orderTitle: "Bestellung", orderText: "Bestellung per E-Mail",
+    preview1Caption: "Innenseite 01", preview2Caption: "Innenseite 02",
+    coverSub: "Leiferde und das Viehmoor 2026 · Felix Wach"
   },
-
   exhibitions: {
-    kicker: "Archiv / Kommende",
-    title: "Ausstellungen",
-    intro: "Kommende und vergangene Ausstellungen von mir",
-    currentYear: "2026",
-    currentText: "26./27.09. LeifArt Leiferde",
-    archiveTitle: "Archiv",
-    archiveText: "-"
+    kicker: "Archiv / Kommende", title: "Ausstellungen", intro: "Kommende und vergangene Ausstellungen von mir",
+    currentYear: "2026", currentText: "26./27.09. LeifArt Leiferde", archiveTitle: "Archiv", archiveText: "-"
   },
-
   about: {
-    kicker: "Das bin ich",
-    title: "Felix Wach",
-    intro: "Fotografische Arbeiten zwischen Naturbeobachtung, Landschaft, grafischer Struktur und stillen Details.",
+    kicker: "Das bin ich", title: "Felix Wach", intro: "Fotografische Arbeiten zwischen Naturbeobachtung, Landschaft, grafischer Struktur und stillen Details.",
     sections: [
       { title: "WACH RECORDS", text: "WACH RECORDS ist die Plattform für fotografische Arbeiten, Publikationen und Ausstellungen von Felix Wach. Die Website ist bewusst reduziert aufgebaut: Die Bilder stehen im Vordergrund, Texte dienen der Einordnung." },
       { title: "Fotografischer Ansatz", text: "Der endgültige Text sollte persönlich formuliert werden und konkrete Arbeitsweise, Themen und Motivation beschreiben. Dieser Abschnitt ist deshalb bewusst noch kurz gehalten." }
     ]
   },
-
   contact: {
-    kicker: "Kontakt",
-    title: "Anfragen",
-    intro: "Für Ausstellungen, Publikationen, Zusammenarbeit und fotografische Anfragen.",
-    email: "E-Mail-Adresse\nfoto@wachrecords.de",
-    note: "Vor Veröffentlichung hier deine gewünschte Kontaktinformation bzw. den Hinweistext eintragen."
+    kicker: "Kontakt", title: "Anfragen", intro: "Für Ausstellungen, Publikationen, Zusammenarbeit und fotografische Anfragen.",
+    email: "E-Mail-Adresse\nfoto@wachrecords.de", note: "Die Kontaktadresse für Anfragen."
   },
-
   legal: {
-    provider: "Felix Wach\nRokamp 6a, 38542 Leiferde",
-    email: "foto@wachrecords.de",
-    phone: "",
-    other: "",
-    privacyAddress: "[Anschrift ergänzen]",
-    privacyEmail: "foto@wachrecords.de",
-    hosting: "[Hosting-Anbieter und die dort anfallende Server-Log-Verarbeitung ergänzen.]"
+    provider: "Felix Wach\nRokamp 6a, 38542 Leiferde", email: "foto@wachrecords.de", phone: "", other: "",
+    privacyAddress: "Rokamp 6a, 38542 Leiferde", privacyEmail: "foto@wachrecords.de",
+    hosting: "GitHub Pages"
   }
 };
