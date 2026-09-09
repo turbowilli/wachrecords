@@ -16,10 +16,7 @@ function setPicture(picture, name, alt = '') {
   const source = picture.querySelector('source');
   const img = picture.querySelector('img');
   if (source) source.srcset = pair.webp;
-  if (img) {
-    img.src = pair.jpg;
-    img.alt = alt;
-  }
+  if (img) { img.src = pair.jpg; img.alt = alt; }
 }
 
 function setCaption(el, item) {
@@ -42,9 +39,8 @@ function loadHome(c) {
     intro.querySelector('p').textContent = c.intro;
   }
   const figures = [...document.querySelectorAll('.gallery figure')];
-  const items = c.gallery;
   figures.forEach((figure, i) => {
-    const item = items[i];
+    const item = c.gallery[i];
     if (!item) return;
     setPicture(figure.querySelector('picture'), item.image, figure.querySelector('img')?.alt || 'Fotografische Arbeit');
     setCaption(figure.querySelector('.caption'), item);
@@ -53,7 +49,7 @@ function loadHome(c) {
   pairs.forEach((pair, pairIndex) => {
     const start = pairIndex === 0 ? 5 : 9;
     [...pair.querySelectorAll('figure')].forEach((figure, j) => {
-      const item = items[start + j];
+      const item = c.gallery[start + j];
       if (!item) return;
       setPicture(figure.querySelector('picture'), item.image, figure.querySelector('img')?.alt || 'Fotografische Arbeit');
       setCaption(figure.querySelector('.caption'), item);
@@ -76,8 +72,7 @@ function loadHome(c) {
 function loadWork(c) {
   const grid = document.querySelector('#work-grid');
   if (!grid) return;
-
-  grid.innerHTML = c.items.map((item) => `
+  grid.innerHTML = c.items.map(item => `
     <figure class="work-card reveal">
       <picture>
         <source srcset="${imagePath(`${item.image}.webp`)}" type="image/webp">
@@ -96,19 +91,30 @@ function loadPage(page, c) {
   hero.querySelector('p').textContent = c.intro;
 
   if (page === 'magazine') {
-    document.querySelector('.text-page .mock-sub').textContent = c.coverSub;
-    document.querySelector('.text-page h2:nth-of-type(1)').textContent = c.formatTitle;
-    document.querySelector('.text-page h2:nth-of-type(1) + p').textContent = c.formatText;
-    document.querySelector('.text-page h2:nth-of-type(2)').textContent = c.orderTitle;
-    document.querySelector('.text-page h2:nth-of-type(2) + p').textContent = c.orderText;
+    const preview = document.querySelector('.preview-copy');
+    if (preview) {
+      preview.querySelector('.section-kicker').textContent = c.previewKicker;
+      preview.querySelector('h2').textContent = c.previewTitle;
+      preview.querySelector('p').textContent = c.previewText;
+    }
+    const textPage = document.querySelector('.text-page');
+    if (textPage) {
+      const hs = textPage.querySelectorAll('h2');
+      const ps = textPage.querySelectorAll('p');
+      if (hs[0]) hs[0].textContent = c.formatTitle;
+      if (ps[0]) ps[0].textContent = c.formatText;
+      if (hs[1]) hs[1].textContent = c.orderTitle;
+      if (ps[1]) ps[1].textContent = c.orderText;
+    }
+    const captions = document.querySelectorAll('.inside-grid figcaption');
+    if (captions[0]?.querySelector('span')) captions[0].querySelector('span').textContent = c.preview1Caption;
+    if (captions[1]?.querySelector('span')) captions[1].querySelector('span').textContent = c.preview2Caption;
   }
   if (page === 'exhibitions') {
     const hs = document.querySelectorAll('.text-page h2');
     const ps = document.querySelectorAll('.text-page p');
-    hs[0].textContent = c.currentYear;
-    ps[0].textContent = c.currentText;
-    hs[1].textContent = c.archiveTitle;
-    ps[1].textContent = c.archiveText;
+    hs[0].textContent = c.currentYear; ps[0].textContent = c.currentText;
+    hs[1].textContent = c.archiveTitle; ps[1].textContent = c.archiveText;
   }
   if (page === 'about') {
     const sections = document.querySelectorAll('.text-page h2');
@@ -139,7 +145,7 @@ function initContent() {
 
 initContent();
 
-const io = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
