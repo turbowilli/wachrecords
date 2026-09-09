@@ -6,12 +6,10 @@ const siteContent = {
     intro: "Fotografische Beobachtungen zwischen Natur, Landschaft, Struktur und Stille.",
     quote: "WACH RECORDS versteht Fotografie als Beobachtung: nah genug für Details, offen genug für Zusammenhänge.",
     magazine: {
-      kicker: "Publikation",
-      title: "WACH RECORDS\nLeiferde und das Viehmoor 2026",
+      kicker: "Publikation", title: "WACH RECORDS\nLeiferde und das Viehmoor 2026",
       text: "Eine fotografische Publikation von Felix Wach. Die erste Ausgabe verbindet ausgewählte Arbeiten in einem gedruckten, kuratierten Format.",
       meta: ["32 Seiten", "DIN A5", "Klammerheftung", "Limitierte Erstauflage"],
-      linkText: "Leiferde und das Viehmoor 2026 →",
-      coverSub: "Leiferde und das Viehmoor 2026 · Felix Wach"
+      linkText: "Leiferde und das Viehmoor 2026 →", coverSub: "Leiferde und das Viehmoor 2026 · Felix Wach"
     },
     gallery: [
       { image: "fog-tree", number: "", title: "", subtitle: "" }, { image: "new-growth" },
@@ -37,8 +35,7 @@ const siteContent = {
     previewKicker: "Cover & Innenseite", previewTitle: "Einblicke in die Ausgabe",
     previewText: "Das Cover und ausgewählte Innenseiten geben einen ersten Eindruck vom fotografischen und gestalterischen Aufbau der Publikation.",
     formatTitle: "Format", formatText: "DIN A5, 32 Seiten, Klammerheftung. Die Erstauflage ist als kleine fotografische Publikation konzipiert.",
-    orderTitle: "Bestellung", orderText: "Bestellung per E-Mail",
-    preview1Caption: "Innenseite 01", preview2Caption: "Innenseite 02",
+    orderTitle: "Bestellung", orderText: "Bestellung per E-Mail", preview1Caption: "Innenseite 01", preview2Caption: "Innenseite 02",
     coverSub: "Leiferde und das Viehmoor 2026 · Felix Wach"
   },
   exhibitions: {
@@ -59,6 +56,7 @@ const siteContent = {
   legal: {
     provider: "Felix Wach\nRokamp 6a, 38542 Leiferde", email: "foto@wachrecords.de", phone: "", other: "",
     privacyAddress: "Rokamp 6a, 38542 Leiferde", privacyEmail: "foto@wachrecords.de",
-    hosting: "GitHub Pages"
+    hosting: "GitHub Pages",
+    privacyExternal: "Im vorliegenden Entwurf werden keine externen Schriftarten, Karten, Analysewerkzeuge oder Social-Media-Embeds geladen."
   }
 };
