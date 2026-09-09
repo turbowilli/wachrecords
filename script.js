@@ -1,10 +1,12 @@
 /* WACH RECORDS — site behavior + central content loader */
-const menu=document.querySelector('.mobile-menu');
-const openBtn=document.querySelector('.nav-toggle');
-const closeBtn=document.querySelector('.mobile-menu .close');
-openBtn?.addEventListener('click',()=>menu?.classList.add('open'));
-closeBtn?.addEventListener('click',()=>menu?.classList.remove('open'));
-menu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+function initMenu(){
+  const menu=document.querySelector('.mobile-menu');
+  const openBtn=document.querySelector('.nav-toggle');
+  const closeBtn=document.querySelector('.mobile-menu .close');
+  openBtn?.addEventListener('click',()=>menu?.classList.add('open'));
+  closeBtn?.addEventListener('click',()=>menu?.classList.remove('open'));
+  menu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+}
 
 const imagePath=name=>`assets/images/${name}`;
 const imagePair=name=>({jpg:imagePath(`${name}.jpg`),webp:imagePath(`${name}.webp`)});
@@ -27,21 +29,15 @@ function loadSiteChrome(){
   if(!window.siteContent)return;
   const s=siteContent;
   document.querySelectorAll('.brand').forEach(el=>el.textContent=s.brand);
-  document.querySelectorAll('.desktop-nav').forEach(nav=>{
-    nav.innerHTML=s.navigation.map(item=>`<a href="${item.href}">${item.label}</a>`).join('');
-  });
+  document.querySelectorAll('.desktop-nav').forEach(nav=>{nav.innerHTML=s.navigation.map(item=>`<a href="${item.href}">${item.label}</a>`).join('');});
   document.querySelectorAll('.mobile-menu').forEach(m=>{
-    const close=m.querySelector('.close');
-    m.innerHTML=(close?close.outerHTML:'<button class="close">Schließen</button>')+
-      s.navigation.map(item=>`<a href="${item.href}">${item.label}</a>`).join('');
+    m.innerHTML='<button class="close">Schließen</button>'+s.navigation.map(item=>`<a href="${item.href}">${item.label}</a>`).join('');
   });
   document.querySelectorAll('.site-footer').forEach(f=>{
     const copyright=f.querySelector(':scope > div:first-child');
     if(copyright)copyright.textContent=s.footer.copyright;
     const links=f.querySelector('.footer-links');
-    if(links)links.innerHTML=`<a href="index.html">${s.footer.home}</a>`+
-      s.navigation.map(item=>`<a href="${item.href}">${item.label}</a>`).join('')+
-      `<a href="impressum.html">${s.footer.imprint}</a><a href="datenschutz.html">${s.footer.privacy}</a>`;
+    if(links)links.innerHTML=`<a href="index.html">${s.footer.home}</a>`+s.navigation.map(item=>`<a href="${item.href}">${item.label}</a>`).join('')+`<a href="impressum.html">${s.footer.imprint}</a><a href="datenschutz.html">${s.footer.privacy}</a>`;
   });
 }
 
@@ -64,60 +60,25 @@ function loadWork(c){
 
 function loadPage(page,c){
   const hero=document.querySelector('.page-hero');
-  if(hero){
-    const kicker=hero.querySelector('.section-kicker');
-    const title=hero.querySelector('.page-title');
-    const intro=hero.querySelector('p');
-    if(kicker)kicker.textContent=c.kicker;
-    if(title)title.textContent=c.title;
-    if(intro)intro.textContent=c.intro||'';
-  }
+  if(hero){const kicker=hero.querySelector('.section-kicker'),title=hero.querySelector('.page-title'),intro=hero.querySelector('p');if(kicker)kicker.textContent=c.kicker;if(title)title.textContent=c.title;if(intro)intro.textContent=c.intro||'';}
   if(page==='magazine'){
-    const preview=document.querySelector('.preview-copy');
-    if(preview){preview.querySelector('.section-kicker').textContent=c.previewKicker;preview.querySelector('h2').textContent=c.previewTitle;preview.querySelector('p').textContent=c.previewText;}
-    const textPage=document.querySelector('.text-page');
-    if(textPage){const hs=textPage.querySelectorAll('h2'),ps=textPage.querySelectorAll('p');if(hs[0])hs[0].textContent=c.formatTitle;if(ps[0])ps[0].textContent=c.formatText;if(hs[1])hs[1].textContent=c.orderTitle;if(ps[1])ps[1].textContent=c.orderText;}
-    const captions=document.querySelectorAll('.inside-grid figcaption');
-    if(captions[0]?.querySelector('span'))captions[0].querySelector('span').textContent=c.preview1Caption;
-    if(captions[1]?.querySelector('span'))captions[1].querySelector('span').textContent=c.preview2Caption;
+    const preview=document.querySelector('.preview-copy');if(preview){preview.querySelector('.section-kicker').textContent=c.previewKicker;preview.querySelector('h2').textContent=c.previewTitle;preview.querySelector('p').textContent=c.previewText;}
+    const textPage=document.querySelector('.text-page');if(textPage){const hs=textPage.querySelectorAll('h2'),ps=textPage.querySelectorAll('p');if(hs[0])hs[0].textContent=c.formatTitle;if(ps[0])ps[0].textContent=c.formatText;if(hs[1])hs[1].textContent=c.orderTitle;if(ps[1])ps[1].textContent=c.orderText;}
+    const captions=document.querySelectorAll('.inside-grid figcaption');if(captions[0]?.querySelector('span'))captions[0].querySelector('span').textContent=c.preview1Caption;if(captions[1]?.querySelector('span'))captions[1].querySelector('span').textContent=c.preview2Caption;
   }
-  if(page==='exhibitions'){
-    const hs=document.querySelectorAll('.text-page h2'),ps=document.querySelectorAll('.text-page p');
-    if(hs[0])hs[0].textContent=c.currentYear;if(ps[0])ps[0].textContent=c.currentText;if(hs[1])hs[1].textContent=c.archiveTitle;if(ps[1])ps[1].textContent=c.archiveText;
-  }
-  if(page==='about'){
-    const sections=document.querySelectorAll('.text-page h2'),texts=document.querySelectorAll('.text-page h2 + p');
-    c.sections.forEach((section,i)=>{if(sections[i])sections[i].textContent=section.title;if(texts[i])texts[i].textContent=section.text;});
-  }
-  if(page==='contact'){
-    const block=document.querySelector('.contact-block');if(block)block.innerHTML=c.email.replace(/\\n/g,'<br>');
-    const note=document.querySelector('.text-page p');if(note)note.textContent=c.note;
-  }
-  if(page==='impressum'){
-    const ps=document.querySelectorAll('.text-page p'),note=document.querySelector('.legal-note');
-    if(note)note.innerHTML=`<strong>Hinweis:</strong> ${c.legalNote}`;
-    if(ps[0])ps[0].innerHTML=c.provider.replace(/\\n/g,'<br>');
-    if(ps[1])ps[1].innerHTML=`${c.email}${c.phone?`<br>${c.phone}`:''}`;
-    if(ps[2])ps[2].textContent=c.other||'Keine weiteren Angaben.';
-  }
-  if(page==='datenschutz'){
-    const ps=document.querySelectorAll('.text-page p'),note=document.querySelector('.legal-note');
-    if(note)note.innerHTML=c.privacyNote;
-    if(ps[0])ps[0].innerHTML=`${c.privacyAddress}<br>${c.privacyEmail}`;
-    if(ps[1])ps[1].textContent=c.hosting;
-    if(ps[2])ps[2].textContent=c.privacyExternal;
-  }
+  if(page==='exhibitions'){const hs=document.querySelectorAll('.text-page h2'),ps=document.querySelectorAll('.text-page p');if(hs[0])hs[0].textContent=c.currentYear;if(ps[0])ps[0].textContent=c.currentText;if(hs[1])hs[1].textContent=c.archiveTitle;if(ps[1])ps[1].textContent=c.archiveText;}
+  if(page==='about'){const sections=document.querySelectorAll('.text-page h2'),texts=document.querySelectorAll('.text-page h2 + p');c.sections.forEach((section,i)=>{if(sections[i])sections[i].textContent=section.title;if(texts[i])texts[i].textContent=section.text;});}
+  if(page==='contact'){const block=document.querySelector('.contact-block');if(block)block.innerHTML=c.email.replace(/\\n/g,'<br>');const note=document.querySelector('.text-page p');if(note)note.textContent=c.note;}
+  if(page==='impressum'){const ps=document.querySelectorAll('.text-page p'),note=document.querySelector('.legal-note');if(note)note.innerHTML=`<strong>Hinweis:</strong> ${c.legalNote}`;if(ps[0])ps[0].innerHTML=c.provider.replace(/\\n/g,'<br>');if(ps[1])ps[1].innerHTML=`${c.email}${c.phone?`<br>${c.phone}`:''}`;if(ps[2])ps[2].textContent=c.other||'Keine weiteren Angaben.';}
+  if(page==='datenschutz'){const ps=document.querySelectorAll('.text-page p'),note=document.querySelector('.legal-note');if(note)note.innerHTML=c.privacyNote;if(ps[0])ps[0].innerHTML=`${c.privacyAddress}<br>${c.privacyEmail}`;if(ps[1])ps[1].textContent=c.hosting;if(ps[2])ps[2].textContent=c.privacyExternal;}
 }
 
-function loadContentModules(){
-  return Promise.all(contentFiles.map(src=>new Promise((resolve,reject)=>{
-    const script=document.createElement('script');script.src=src;script.onload=resolve;script.onerror=reject;document.head.appendChild(script);
-  })));
-}
+function loadContentModules(){return Promise.all(contentFiles.map(src=>new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=src;script.onload=resolve;script.onerror=reject;document.head.appendChild(script);})));}
 
 function initContent(){
   loadContentModules().then(()=>{
     loadSiteChrome();
+    initMenu();
     const path=location.pathname;
     if(path.endsWith('/index.html')||path.endsWith('/'))loadHome(homeContent);
     if(path.endsWith('/work.html'))loadWork(workContent);
