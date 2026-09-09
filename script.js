@@ -1,11 +1,16 @@
 /* WACH RECORDS — site behavior + central content loader */
 function initMenu(){
-  const menu=document.querySelector('.mobile-menu');
-  const openBtn=document.querySelector('.nav-toggle');
-  const closeBtn=document.querySelector('.mobile-menu .close');
-  openBtn?.addEventListener('click',()=>menu?.classList.add('open'));
-  closeBtn?.addEventListener('click',()=>menu?.classList.remove('open'));
-  menu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+  if(window.__wachMenuReady)return;
+  window.__wachMenuReady=true;
+  document.addEventListener('click',event=>{
+    const open=event.target.closest('.nav-toggle');
+    const close=event.target.closest('.mobile-menu .close');
+    const link=event.target.closest('.mobile-menu a');
+    const menu=document.querySelector('.mobile-menu');
+    if(open&&menu){event.preventDefault();menu.classList.add('open');}
+    if(close&&menu){event.preventDefault();menu.classList.remove('open');}
+    if(link&&menu)menu.classList.remove('open');
+  });
 }
 
 const imagePath=name=>`assets/images/${name}`;
@@ -31,7 +36,7 @@ function loadSiteChrome(){
   document.querySelectorAll('.brand').forEach(el=>el.textContent=s.brand);
   document.querySelectorAll('.desktop-nav').forEach(nav=>{nav.innerHTML=s.navigation.map(item=>`<a href="${item.href}">${item.label}</a>`).join('');});
   document.querySelectorAll('.mobile-menu').forEach(m=>{
-    m.innerHTML='<button class="close">Schließen</button>'+s.navigation.map(item=>`<a href="${item.href}">${item.label}</a>`).join('');
+    m.innerHTML='<button class="close" type="button">Schließen</button>'+s.navigation.map(item=>`<a href="${item.href}">${item.label}</a>`).join('');
   });
   document.querySelectorAll('.site-footer').forEach(f=>{
     const copyright=f.querySelector(':scope > div:first-child');
@@ -76,9 +81,9 @@ function loadPage(page,c){
 function loadContentModules(){return Promise.all(contentFiles.map(src=>new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=src;script.onload=resolve;script.onerror=reject;document.head.appendChild(script);})));}
 
 function initContent(){
+  initMenu();
   loadContentModules().then(()=>{
     loadSiteChrome();
-    initMenu();
     const path=location.pathname;
     if(path.endsWith('/index.html')||path.endsWith('/'))loadHome(homeContent);
     if(path.endsWith('/work.html'))loadWork(workContent);
