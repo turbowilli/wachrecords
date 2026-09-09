@@ -59,11 +59,16 @@ const siteContent = {
     kicker: "Publikation",
     title: "Leiferde und das Viehmoor 2026",
     intro: "Mein erster Versuch eines Zine",
+    previewKicker: "Cover & Innenseite",
+    previewTitle: "Einblicke in die Ausgabe",
+    previewText: "Das Cover und ausgewählte Innenseiten geben einen ersten Eindruck vom fotografischen und gestalterischen Aufbau der Publikation.",
     formatTitle: "Format",
     formatText: "DIN A5, 32 Seiten, Klammerheftung. Die Erstauflage ist als kleine fotografische Publikation konzipiert.",
     orderTitle: "Bestellung",
     orderText: "Bestellung per E-Mail",
-    coverSub: "Leiferde und das Viehmoor 2026 · Felix Wach"
+    coverSub: "Leiferde und das Viehmoor 2026 · Felix Wach",
+    preview1Caption: "Innenseite 01",
+    preview2Caption: "Innenseite 02"
   },
 
   exhibitions: {
@@ -91,16 +96,16 @@ const siteContent = {
     title: "Anfragen",
     intro: "Für Ausstellungen, Publikationen, Zusammenarbeit und fotografische Anfragen.",
     email: "E-Mail-Adresse\nfoto@wachrecords.de",
-    note: Die echte geschäftliche E-Mail-Adresse wurde nicht angenommen oder erfunden. Vor Veröffentlichung hier deine gewünschte Adresse eintragen."
+    note: "Vor Veröffentlichung hier deine gewünschte Kontaktinformation bzw. den Hinweistext eintragen."
   },
 
   legal: {
     provider: "Felix Wach\nRokamp 6a, 38542 Leiferde",
-    email: "[foto@wachrecords.de]",
-    phone: [Telefon, falls erforderlich/gewünscht],
-    other: [ggf. Umsatzsteuer-ID, Registerangaben oder sonstige Pflichtangaben ergänzen],
+    email: "foto@wachrecords.de",
+    phone: "",
+    other: "",
     privacyAddress: "[Anschrift ergänzen]",
-    privacyEmail: "[E-Mail ergänzen]",
+    privacyEmail: "foto@wachrecords.de",
     hosting: "[Hosting-Anbieter und die dort anfallende Server-Log-Verarbeitung ergänzen.]"
   }
 };
