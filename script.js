@@ -55,7 +55,18 @@ function loadHome(c){
   [...document.querySelectorAll('.editorial-pair')].forEach((pair,pairIndex)=>{const start=pairIndex===0?5:9;[...pair.querySelectorAll('figure')].forEach((figure,j)=>{const item=c.gallery[start+j];if(item){setPicture(figure.querySelector('picture'),item.image,figure.querySelector('img')?.alt||'Fotografische Arbeit');setCaption(figure.querySelector('.caption'),item);}});});
   const quote=document.querySelector('.quote p');if(quote)quote.textContent=c.quote;
   const mag=c.magazine,magSection=document.querySelector('.magazine');
-  if(magSection){magSection.querySelector('.section-kicker').textContent=mag.kicker;magSection.querySelector('h2').innerHTML=mag.title.replace('\\n','<br>');magSection.querySelector('.reveal p').textContent=mag.text;magSection.querySelector('.meta').innerHTML=mag.meta.join('<br>');magSection.querySelector('.text-link').textContent=mag.linkText;magSection.querySelector('.mock-sub').textContent=mag.coverSub;}
+  if(magSection){
+    const kicker=magSection.querySelector('.section-kicker');
+    const title=magSection.querySelector('h2');
+    const text=magSection.querySelector('.reveal p');
+    const meta=magSection.querySelector('.meta');
+    const link=magSection.querySelector('.text-link');
+    if(kicker)kicker.textContent=mag.kicker;
+    if(title)title.innerHTML=mag.title.replace('\\n','<br>');
+    if(text)text.textContent=mag.text;
+    if(meta)meta.innerHTML=mag.meta.join('<br>');
+    if(link)link.textContent=mag.linkText;
+  }
 }
 
 function loadWork(c){
