@@ -13,7 +13,8 @@ function initMenu(){
   });
 }
 
-const imagePath=name=>`assets/images/${name}`;
+const ASSET_VERSION='20260921';
+const imagePath=name=>`assets/images/${name}?v=${ASSET_VERSION}`;
 const imagePair=name=>({jpg:imagePath(`${name}.jpg`),webp:imagePath(`${name}.webp`)});
 
 function setPicture(picture,name,alt=''){
@@ -98,7 +99,7 @@ function loadPage(page,c){
   if(page==='datenschutz'){const ps=document.querySelectorAll('.text-page p'),note=document.querySelector('.legal-note');if(note)note.innerHTML=c.privacyNote;if(ps[0])ps[0].innerHTML=`${c.privacyAddress}<br>${c.privacyEmail}`;if(ps[1])ps[1].textContent=c.hosting;if(ps[2])ps[2].textContent=c.privacyExternal;}
 }
 
-function loadContentModules(){return Promise.all(contentFiles.map(src=>new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=src;script.onload=resolve;script.onerror=reject;document.head.appendChild(script);})));}
+function loadContentModules(){return Promise.all(contentFiles.map(src=>new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=`${src}?v=${ASSET_VERSION}`;script.onload=resolve;script.onerror=reject;document.head.appendChild(script);})));}
 
 function initContent(){
   initMenu();
