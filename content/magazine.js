@@ -1,7 +1,7 @@
 /* WACH RECORDS — Publikation */
 const magazineContent = {
   kicker: "Publikation",
-  title: "Leiferde und das Viehmoor 2026",
+  title: "Leiferde und das Viehmoor 2025",
   intro: "Mein erster Versuch eines Zine",
   previewKicker: "Cover & Innenseite",
   previewTitle: "Einblicke in die Ausgabe",
@@ -12,5 +12,5 @@ const magazineContent = {
   orderText: "Bestellung per E-Mail",
   preview1Caption: "Innenseite 01",
   preview2Caption: "Innenseite 02",
-  coverSub: "Leiferde und das Viehmoor 2026 · Felix Wach"
+  coverSub: "Leiferde und das Viehmoor 2025 · Felix Wach"
 };
