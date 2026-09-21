@@ -12,3 +12,7 @@
     transition-duration:0.01ms!important;
   }
 }
+/* Startseite: Navigation steht oberhalb des Hero-Bildes */
+.home-header{position:relative!important;top:auto!important;left:auto!important;right:auto!important;bottom:auto!important;background:var(--paper);color:var(--ink);border-bottom:1px solid var(--line);mix-blend-mode:normal;pointer-events:auto;}
+.hero{min-height:calc(100svh - 86px);}
+@media(max-width:800px){.home-header{position:relative!important;}.hero{min-height:calc(100svh - 74px);}}
