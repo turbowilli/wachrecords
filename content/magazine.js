@@ -2,7 +2,7 @@
 const magazineContent = {
   kicker: "Publikation",
   title: "Leiferde und das Viehmoor 2025",
-  intro: "Mein erster Versuch eines Zine",
+  intro: "Eine fotografische Publikation über Leiferde und das Viehmoor.",
   previewKicker: "Cover & Innenseite",
   previewTitle: "Einblicke in die Ausgabe",
   previewText: "Das Cover und ausgewählte Innenseiten geben einen ersten Eindruck vom fotografischen und gestalterischen Aufbau der Publikation.",
