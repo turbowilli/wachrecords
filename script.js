@@ -54,7 +54,7 @@ function loadHome(c){
   if(hero){setPicture(hero.querySelector('picture'),c.hero.image,c.hero.title);hero.querySelector('h1').textContent=c.hero.title;hero.querySelector('p').textContent=c.hero.subtitle;}
   const intro=document.querySelector('.intro');
   if(intro){intro.querySelector('.kicker').textContent=c.introKicker;intro.querySelector('p').textContent=c.intro;}
-  [...document.querySelectorAll('.gallery figure')].forEach((figure,i)=>{const item=c.gallery[i];if(item){setPicture(figure.querySelector('picture'),item.image,figure.querySelector('img')?.alt||'Fotografische Arbeit');setCaption(figure.querySelector('.caption'),item);}});
+  [...document.querySelectorAll('.gallery figure')].forEach((figure,i)=>{const item=c.gallery[i];if(item){setPicture(figure.querySelector('picture'),item.image,figure.querySelector('img')?.alt||'Fotografische Arbeit');}});
   const quote=document.querySelector('.quote p');if(quote)quote.textContent=c.quote;
   const mag=c.magazine,magSection=document.querySelector('.magazine');
   if(magSection){
@@ -107,6 +107,7 @@ function initContent(){
     if(path.endsWith('/contact.html'))loadPage('contact',contactContent);
     if(path.endsWith('/impressum.html'))loadPage('impressum',legalContent);
     if(path.endsWith('/datenschutz.html'))loadPage('datenschutz',legalContent);
+    document.documentElement.classList.add('reveal-ready');
     const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}})},{threshold:.12});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   }).catch(error=>console.error('WACH RECORDS: Content-Module konnten nicht geladen werden.',error));
