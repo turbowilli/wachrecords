@@ -4,7 +4,6 @@ const legalContent = {
   email: "foto@wachrecords.de",
   phone: "",
   other: "",
-  legalNote: "Die Angaben auf dieser Seite dienen als Impressumsangaben für WACH RECORDS.",
   privacyAddress: "Felix Wach\nRokamp 6a, 38542 Leiferde",
   privacyEmail: "foto@wachrecords.de",
   hosting: "Diese Website wird über GitHub Pages gehostet. GitHub weist darauf hin, dass beim Besuch einer GitHub-Pages-Website die IP-Adresse des Besuchers zu Sicherheitszwecken protokolliert und gespeichert wird. Die Verarbeitung erfolgt durch GitHub als Hosting-Anbieter. Weitere Informationen enthält die Datenschutzerklärung von GitHub.",
