@@ -74,7 +74,7 @@ function loadHome(c){
 
 function loadWork(c){
   const grid=document.querySelector('#work-grid');if(!grid)return;
-  grid.innerHTML=c.items.map(item=>`<figure class="work-card reveal"><picture><source srcset="${imagePath(`${item.image}.webp`)}" type="image/webp"><img src="${imagePath(`${item.image}.jpg`)}" alt="${item.alt||item.title||'Fotografische Arbeit'}" loading="lazy"></picture><figcaption class="caption"><span>${item.title||''}</span><span>${item.number||''}</span></figcaption></figure>`).join('');
+  grid.innerHTML=c.items.map(item=>`<figure class="work-card reveal"><picture><source srcset="${imagePath(`${item.image}.webp`)}" type="image/webp"><img src="${imagePath(`${item.image}.jpg`)}" alt="${item.alt||item.title||'Fotografische Arbeit'}" loading="lazy"></picture><figcaption class="caption"><span></span><span>${item.number||''}</span></figcaption></figure>`).join('');
 }
 
 function loadPage(page,c){
