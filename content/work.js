@@ -2,7 +2,7 @@
 const workContent = {
   kicker: "Felix Wach",
   title: "Ausgewählte Arbeiten",
-  intro: "Eine erste kuratierte Auswahl. Die Struktur ist bewusst offen gehalten, damit später eigenständige Serien wie Natur, Tierwelt oder Schwarz-Weiß ergänzt werden können.",
+  intro: "Eine Auswahl meiner fotografischen Arbeiten",
   items: [
     { image: "hero-forest", title: "Wald", number: "01", alt: "Abstrakte Waldaufnahme" },
     { image: "fog-tree", title: "Landschaft", number: "02", alt: "Baum im Nebel" },
