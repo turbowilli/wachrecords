@@ -24,13 +24,6 @@ function setPicture(picture,name,alt=''){
   if(img){img.src=pair.jpg;img.alt=alt;}
 }
 
-function setCaption(el,item){
-  if(!el||!item?.number)return;
-  const spans=el.querySelectorAll('span');
-  if(spans[0])spans[0].textContent=`${item.number} — ${item.title||''}`;
-  if(spans[1])spans[1].textContent=item.subtitle||'';
-}
-
 function loadSiteChrome(){
   const s=window.siteContent||{
     brand:"WACH RECORDS",
@@ -62,7 +55,6 @@ function loadHome(c){
   const intro=document.querySelector('.intro');
   if(intro){intro.querySelector('.kicker').textContent=c.introKicker;intro.querySelector('p').textContent=c.intro;}
   [...document.querySelectorAll('.gallery figure')].forEach((figure,i)=>{const item=c.gallery[i];if(item){setPicture(figure.querySelector('picture'),item.image,figure.querySelector('img')?.alt||'Fotografische Arbeit');setCaption(figure.querySelector('.caption'),item);}});
-  [...document.querySelectorAll('.editorial-pair')].forEach((pair,pairIndex)=>{const start=pairIndex===0?5:9;[...pair.querySelectorAll('figure')].forEach((figure,j)=>{const item=c.gallery[start+j];if(item){setPicture(figure.querySelector('picture'),item.image,figure.querySelector('img')?.alt||'Fotografische Arbeit');setCaption(figure.querySelector('.caption'),item);}});});
   const quote=document.querySelector('.quote p');if(quote)quote.textContent=c.quote;
   const mag=c.magazine,magSection=document.querySelector('.magazine');
   if(magSection){
@@ -77,6 +69,7 @@ function loadHome(c){
     if(meta)meta.innerHTML=mag.meta.join('<br>');
     if(link)link.textContent=mag.linkText;
   }
+
 }
 
 function loadWork(c){
