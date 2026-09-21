@@ -6,11 +6,11 @@ const homeContent = {
   quote: "WACH RECORDS versteht Fotografie als Beobachtung: nah genug für Details, offen genug für Zusammenhänge.",
   magazine: {
     kicker: "Publikation",
-    title: "WACH RECORDS\nLeiferde und das Viehmoor 2026",
+    title: "WACH RECORDS\nLeiferde und das Viehmoor 2025",
     text: "Eine fotografische Publikation von Felix Wach. Die erste Ausgabe verbindet ausgewählte Arbeiten in einem gedruckten, kuratierten Format.",
     meta: ["32 Seiten", "DIN A5", "Klammerheftung", "Limitierte Erstauflage"],
-    linkText: "Leiferde und das Viehmoor 2026 →",
-    coverSub: "Leiferde und das Viehmoor 2026 · Felix Wach"
+    linkText: "Leiferde und das Viehmoor 2025 →",
+    coverSub: "Leiferde und das Viehmoor 2025 · Felix Wach"
   },
   gallery: [
     { image: "fog-tree" },
