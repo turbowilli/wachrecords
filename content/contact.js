@@ -4,5 +4,5 @@ const contactContent = {
   title: "Anfragen",
   intro: "Für Ausstellungen, Publikationen, Zusammenarbeit und fotografische Anfragen.",
   email: "foto@wachrecords.de",
-  purchase: "Ausgewählte Fotografien und Publikationen können auf Anfrage erworben werden."
+  purchase: "Fotografien · Zines · Kalender\n\nAusgewählte Fotografien, Zines und Kalender können auf Anfrage erworben werden."
 };
