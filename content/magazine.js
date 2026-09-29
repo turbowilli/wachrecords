@@ -10,5 +10,6 @@ const magazineContent = {
   formatText: "DIN A5, 32 Seiten, Klammerheftung. Die Erstauflage ist als kleine fotografische Publikation konzipiert.",
   preview1Caption: "Innenseite 01",
   preview2Caption: "Innenseite 02",
-  coverSub: "Leiferde und das Viehmoor 2025 · Felix Wach"
+  coverSub: "Leiferde und das Viehmoor 2025 · Felix Wach",
+  availability: "Die Publikation ist auf Anfrage erhältlich."
 };
