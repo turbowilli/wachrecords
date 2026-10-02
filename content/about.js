@@ -2,15 +2,19 @@
 const aboutContent = {
   kicker: "Das bin ich",
   title: "Felix Wach",
-  intro: "Fotografische Arbeiten zwischen Naturbeobachtung, Landschaft, grafischer Struktur und stillen Details.",
+  intro: "Mein Name ist Felix und ich lebe mit meiner Familie in Leiferde.",
   sections: [
     {
-      title: "WACH RECORDS",
-      text: "WACH RECORDS ist die Plattform für fotografische Arbeiten, Publikationen und Ausstellungen von Felix Wach. Die Website ist bewusst reduziert aufgebaut: Die Bilder stehen im Vordergrund, Texte dienen der Einordnung."
+      title: "Moin!",
+      text: "Als wir vor einigen Jahren aus der Stadt hierherzogen, war ich sofort von der Schönheit und Vielfalt der Natur fasziniert. Schon bald begann ich, diese besonderen Augenblicke mit der Kamera festzuhalten – und entdeckte dabei meine Leidenschaft für die Naturfotografie."
     },
     {
-      title: "Fotografischer Ansatz",
-      text: "Meine fotografische Arbeit entsteht aus der Beobachtung meiner Umgebung. Mich interessieren Landschaften, natürliche Strukturen und Situationen, die sich nicht immer auf den ersten Blick erschließen. Dabei geht es weniger um das spektakuläre Motiv als um Licht, Atmosphäre, Formen und kleine Veränderungen im Vertrauten."
+      title: "Was mich interessiert",
+      text: "Mich fasziniert das, was man leicht übersieht: ein Tier im richtigen Moment, besonderes Licht, Strukturen, Stimmungen und die kleinen Geschichten, die die Natur erzählt. Die meisten meiner Bilder entstehen in Leiferde, den umliegenden Wäldern und Wiesen sowie im Viehmoor. Oft bin ich einfach unterwegs und lasse mich überraschen, was mir vor die Kamera kommt."
+    },
+    {
+      title: "WACH RECORDS",
+      text: "Mit WACH RECORDS möchte ich diese Momente festhalten und mit anderen teilen – abseits der schnellen Welt der sozialen Medien. Die Website versammelt meine fotografischen Arbeiten, Publikationen und Ausstellungen. Schön, dass du hier bist. Viel Freude beim Anschauen!"
     }
   ]
 };
