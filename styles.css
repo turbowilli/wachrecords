@@ -29,3 +29,9 @@
 .contact-item a:hover{text-decoration:underline;text-underline-offset:5px}
 .purchase-note{max-width:650px;margin:0!important;padding-top:0;font:400 clamp(1.35rem,2.5vw,2rem)/1.35 Georgia,serif;white-space:pre-line}
 @media(max-width:800px){.contact-item{grid-template-columns:1fr;gap:7px}.contact-item a{font-size:clamp(1.45rem,7vw,2.2rem)}}
+
+/* Startseiten-Galerie: ausgewogene Bildgrößen */
+.home-gallery .frame.narrow{width:min(62%,760px)}
+.home-gallery .frame.wide{width:min(62%,860px)}
+.home-gallery .frame.full{width:min(82%,1180px);margin-inline:auto}
+@media(max-width:800px){.home-gallery .frame.narrow,.home-gallery .frame.wide,.home-gallery .frame.full{width:100%;margin-left:0;margin-right:0}}
