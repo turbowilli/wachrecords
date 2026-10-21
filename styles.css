@@ -30,11 +30,11 @@
 .purchase-note{max-width:650px;margin:0!important;padding-top:0;font:400 clamp(1.35rem,2.5vw,2rem)/1.35 Georgia,serif;white-space:pre-line}
 @media(max-width:800px){.contact-item{grid-template-columns:1fr;gap:7px}.contact-item a{font-size:clamp(1.45rem,7vw,2.2rem)}}
 
-/* Startseiten-Galerie: ausgewogene Bildgrößen */
-.home-gallery .frame.narrow{width:min(62%,760px)}
-.home-gallery .frame.wide{width:min(62%,860px)}
-.home-gallery .frame.full{width:min(82%,1180px);margin-inline:auto}
-@media(max-width:800px){.home-gallery .frame.narrow,.home-gallery .frame.wide,.home-gallery .frame.full{width:100%;margin-left:0;margin-right:0}}
+/* Startseiten-Galerie: ausgewogenere Bildgrößen */
+.home-gallery .frame.narrow{width:min(68%,760px)}
+.home-gallery .frame.wide{width:min(55%,760px);margin-inline:auto}
+.home-gallery .frame.full{width:min(68%,1000px);margin-inline:auto}
+@media(max-width:800px){.home-gallery .frame.narrow{width:92%;margin-left:auto;margin-right:auto}.home-gallery .frame.wide{width:82%;margin-left:auto;margin-right:auto}.home-gallery .frame.full{width:92%;margin-left:auto;margin-right:auto}}
 
 /* Hürde gegen direktes Öffnen und Ziehen der Galeriebilder */
 .home-gallery img{-webkit-user-drag:none;user-select:none;-webkit-user-select:none}
