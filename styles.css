@@ -35,3 +35,7 @@
 .home-gallery .frame.wide{width:min(62%,860px)}
 .home-gallery .frame.full{width:min(82%,1180px);margin-inline:auto}
 @media(max-width:800px){.home-gallery .frame.narrow,.home-gallery .frame.wide,.home-gallery .frame.full{width:100%;margin-left:0;margin-right:0}}
+
+/* Hürde gegen direktes Öffnen und Ziehen der Galeriebilder */
+.home-gallery img{-webkit-user-drag:none;user-select:none;-webkit-user-select:none}
+.home-gallery picture{ -webkit-touch-callout:none }
