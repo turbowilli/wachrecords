@@ -13,7 +13,7 @@ function initMenu(){
   });
 }
 
-const ASSET_VERSION='20261021a';
+const ASSET_VERSION='20261021b';
 const imagePath=name=>`assets/images/${name}?v=${ASSET_VERSION}`;
 const imagePair=name=>({jpg:imagePath(`${name}.jpg`),webp:imagePath(`${name}.webp`)});
 
@@ -54,7 +54,7 @@ function loadHome(c){
   if(hero){setPicture(hero.querySelector('picture'),c.hero.image,c.hero.title);hero.querySelector('h1').textContent=c.hero.title;hero.querySelector('p').textContent=c.hero.subtitle;}
   const intro=document.querySelector('.intro');
   if(intro){intro.querySelector('.kicker').textContent=c.introKicker;intro.querySelector('p').textContent=c.intro;}
-  [...document.querySelectorAll('.gallery figure')].forEach((figure,i)=>{const item=c.gallery[i];if(item){setPicture(figure.querySelector('picture'),item.image,figure.querySelector('img')?.alt||'Fotografische Arbeit');}});
+  [...document.querySelectorAll('.gallery figure')].forEach((figure,i)=>{const item=c.gallery[i];if(item){setPicture(figure.querySelector('picture'),item.image,figure.querySelector('img')?.alt||'Fotografische Arbeit');const caption=figure.querySelector('.caption');if(caption){const spans=caption.querySelectorAll('span');if(spans[0])spans[0].textContent=item.category||'';if(spans[1])spans[1].textContent=item.title||'';}}});
   const quote=document.querySelector('.quote p');if(quote)quote.textContent=c.quote;
   const mag=c.magazine,magSection=document.querySelector('.magazine');
   if(magSection){
