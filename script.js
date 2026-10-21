@@ -13,7 +13,7 @@ function initMenu(){
   });
 }
 
-const ASSET_VERSION='20261021g';
+const ASSET_VERSION='20261021h';
 const imagePath=name=>`assets/images/${name}?v=${ASSET_VERSION}`;
 const imagePair=name=>({jpg:imagePath(`${name}.jpg`),webp:imagePath(`${name}.webp`)});
 
@@ -26,7 +26,7 @@ function setPicture(picture,name,alt=''){
 
 function loadSiteChrome(){
   const s=window.siteContent||{
-    brand:"WACH RECORDS",
+    brand:"Felix Wach – Natur vor der Tür",
     navigation:[
       {label:"Arbeiten",href:"work.html"},
       {label:"Publikation",href:"magazine.html"},
