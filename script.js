@@ -13,7 +13,7 @@ function initMenu(){
   });
 }
 
-const ASSET_VERSION='20261021i';
+const ASSET_VERSION='20261021j';
 const imagePath=name=>`assets/images/${name}?v=${ASSET_VERSION}`;
 const imagePair=name=>({jpg:imagePath(`${name}.jpg`),webp:imagePath(`${name}.webp`)});
 
