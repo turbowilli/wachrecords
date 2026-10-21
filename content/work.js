@@ -2,7 +2,7 @@
 const workContent = {
   kicker: "Felix Wach",
   title: "Ausgewählte Arbeiten",
-  intro: "Eine Auswahl meiner fotografischen Arbeiten",
+  intro: "Alle Fotografien sind in verschiedenen Größen und mit unterschiedlichen Rahmen erhältlich.",
   items: [
     { image: "hero-forest", title: "Wald", number: "01", alt: "Abstrakte Waldaufnahme" },
     { image: "fog-tree", title: "Landschaft", number: "02", alt: "Baum im Nebel" },
