@@ -1,8 +1,8 @@
 /* WACH RECORDS — Startseite */
 const homeContent = {
   hero: { title: "Felix Wach", subtitle: "Fotografie · WACH RECORDS", image: "hero-forest" },
-  introKicker: "Willkommen bei WACH RECORDS.",
-  intro: "Fotografische Arbeiten über Landschaft, Natur und das, was sich oft erst auf den zweiten Blick zeigt.",
+  introKicker: "WACH RECORDS · NATURFOTOGRAFIE",
+  intro: "Ich bin Felix Wach. Mit WACH RECORDS halte ich Landschaften, Tiere und stille Details aus der Natur fest – direkt vor der Haustür und oft erst auf den zweiten Blick sichtbar.",
   quote: "WACH RECORDS versteht Fotografie als Beobachtung: nah genug für Details, offen genug für Zusammenhänge.",
   magazine: {
     kicker: "Publikation",
