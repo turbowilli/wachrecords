@@ -13,7 +13,7 @@ function initMenu(){
   });
 }
 
-const ASSET_VERSION='20261021h';
+const ASSET_VERSION='20261021i';
 const imagePath=name=>`assets/images/${name}?v=${ASSET_VERSION}`;
 const imagePair=name=>({jpg:imagePath(`${name}.jpg`),webp:imagePath(`${name}.webp`)});
 
@@ -36,7 +36,7 @@ function loadSiteChrome(){
     ],
     footer:{copyright:"© 2026 Felix Wach · WACH RECORDS",home:"Startseite",imprint:"Impressum",privacy:"Datenschutz"}
   };
-  document.querySelectorAll('.brand').forEach(el=>el.textContent=s.brand);
+  document.querySelectorAll('.brand').forEach(el=>{const label=el.querySelector('.brand-text');if(label)label.textContent=s.brand;else el.textContent=s.brand;});
   document.querySelectorAll('.desktop-nav').forEach(nav=>{nav.innerHTML=s.navigation.map(item=>`<a href="${item.href}">${item.label}</a>`).join('');});
   document.querySelectorAll('.mobile-menu').forEach(m=>{
     m.innerHTML='<button class="close" type="button">Schließen</button>'+s.navigation.map(item=>`<a href="${item.href}">${item.label}</a>`).join('');
