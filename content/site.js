@@ -1,6 +1,6 @@
 /* WACH RECORDS — Website / Navigation / Footer */
 const siteContent = {
-  brand: "WACH RECORDS",
+  brand: "Felix Wach – Natur vor der Tür",
   navigation: [
     { label: "Arbeiten", href: "work.html" },
     { label: "Publikation", href: "magazine.html" },
