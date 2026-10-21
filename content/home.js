@@ -1,6 +1,6 @@
 /* WACH RECORDS — Startseite */
 const homeContent = {
-  hero: { title: "Felix Wach", subtitle: "Fotografie · WACH RECORDS", image: "hero-forest" },
+  hero: { title: "Felix Wach", subtitle: "Natur vor der Tür", image: "hero-forest" },
   introKicker: "WACH RECORDS · NATURFOTOGRAFIE",
   intro: "Ich bin Felix Wach. Mit WACH RECORDS halte ich Landschaften, Tiere und stille Details aus der Natur fest – direkt vor der Haustür und oft erst auf den zweiten Blick sichtbar.",
   quote: "WACH RECORDS versteht Fotografie als Beobachtung: nah genug für Details, offen genug für Zusammenhänge.",
