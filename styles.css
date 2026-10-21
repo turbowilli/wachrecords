@@ -50,3 +50,9 @@
 /* Originales Felix-Wach-Logo auf der Startseite */
 .home-logo{display:flex;justify-content:center;padding-top:clamp(30px,5vw,72px);padding-bottom:clamp(40px,7vw,100px)}
 .home-logo img{width:min(100%,430px);height:auto;object-fit:contain}
+
+/* Logo und Markenname nebeneinander in der Startseiten-Navigation */
+.home-header .brand{display:flex;align-items:center;gap:11px;letter-spacing:0;white-space:nowrap}
+.home-header .brand-logo{width:38px;height:38px;object-fit:contain;flex:0 0 auto}
+.home-header .brand-text{font-size:clamp(.68rem,1.3vw,.86rem);letter-spacing:.06em;font-weight:700}
+@media(max-width:800px){.home-header .brand{gap:8px;white-space:normal}.home-header .brand-logo{width:32px;height:32px}.home-header .brand-text{max-width:190px;line-height:1.2}}
