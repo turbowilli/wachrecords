@@ -45,3 +45,7 @@
 .wordmark-symbol{display:grid;place-items:center;width:42px;height:42px;border:1px solid currentColor;font:400 1rem/1 Georgia,serif;letter-spacing:-.08em}
 .wordmark-name{font-size:.65rem;letter-spacing:.2em;font-weight:700}
 @media(max-width:800px){.home-wordmark{margin-top:30px}}
+
+/* Originales Felix-Wach-Logo auf der Startseite */
+.home-logo{display:flex;justify-content:center;padding-top:clamp(30px,5vw,72px);padding-bottom:clamp(40px,7vw,100px)}
+.home-logo img{width:min(100%,430px);height:auto;object-fit:contain}
