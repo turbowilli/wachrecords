@@ -13,8 +13,8 @@ const homeContent = {
     coverSub: "Leiferde und das Viehmoor 2025 · Felix Wach"
   },
   gallery: [
-    { image: "hasen-portrait" },
-    { image: "mushrooms-bw" },
-    { image: "abendwiese" }
+    { image: "hasen-portrait", category: "Tierwelt", title: "Hase" },
+    { image: "mushrooms-bw", category: "Detail", title: "Stille Formen" },
+    { image: "abendwiese", category: "Landschaft", title: "Abendlicht" }
   ]
 };
