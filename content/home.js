@@ -1,8 +1,8 @@
 /* WACH RECORDS — Startseite */
 const homeContent = {
   hero: { title: "Felix Wach", subtitle: "Natur vor der Tür", image: "hero-forest" },
-  introKicker: "WACH RECORDS · NATURFOTOGRAFIE",
-  intro: "Ich bin Felix Wach. Mit WACH RECORDS halte ich Landschaften, Tiere und stille Details aus der Natur fest – direkt vor der Haustür und oft erst auf den zweiten Blick sichtbar.",
+  introKicker: "Natur vor der Tür",
+  intro: "Mich fasziniert das, was man leicht übersieht: ein Tier im richtigen Moment, besonderes Licht, Strukturen, Stimmungen und die kleinen Geschichten, die die Natur erzählt. Die meisten meiner Bilder entstehen in Leiferde, den umliegenden Wäldern und Wiesen sowie im Viehmoor. Oft bin ich einfach unterwegs und lasse mich überraschen, was mir vor die Kamera kommt.",
   quote: "WACH RECORDS versteht Fotografie als Beobachtung: nah genug für Details, offen genug für Zusammenhänge.",
   magazine: {
     kicker: "Publikation",
