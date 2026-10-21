@@ -68,3 +68,13 @@
   .brand-logo,.home-header .brand-logo{width:40px;height:40px}
   .brand-text{max-width:190px;line-height:1.2}
 }
+
+
+/* Logo deutlich präsenter: füllt den Navigationsbalken besser aus */
+.brand{gap:14px}
+.brand-logo,.home-header .brand-logo{width:64px;height:64px}
+.site-header,.inner-header{padding-top:12px!important;padding-bottom:12px!important}
+@media(max-width:800px){
+  .brand-logo,.home-header .brand-logo{width:54px;height:54px}
+  .site-header,.inner-header{padding-top:10px!important;padding-bottom:10px!important}
+}
