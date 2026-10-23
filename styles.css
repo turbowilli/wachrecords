@@ -78,3 +78,12 @@
   .brand-logo,.home-header .brand-logo{width:54px;height:54px}
   .site-header,.inner-header{padding-top:10px!important;padding-bottom:10px!important}
 }
+
+
+/* Veranstaltungsliste */
+.event-list{border-top:1px solid var(--line);margin-top:24px}
+.event-item{display:grid;grid-template-columns:minmax(190px, .7fr) 1.3fr;gap:28px;padding:24px 0;border-bottom:1px solid var(--line);align-items:start}
+.event-date{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--moss);padding-top:5px}
+.event-details h3{font:400 clamp(1.45rem,2.8vw,2.2rem)/1.12 Georgia,serif;margin:0 0 6px}
+.event-details p{margin:0;font-size:.95rem}
+@media(max-width:600px){.event-item{grid-template-columns:1fr;gap:8px;padding:20px 0}}
