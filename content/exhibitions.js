@@ -4,7 +4,9 @@ const exhibitionsContent = {
   title: "Ausstellungen",
   intro: "Kommende und vergangene Ausstellungen von mir",
   currentYear: "2026",
-  currentText: "26./27.09. LeifArt Leiferde",
-  archiveTitle: "Archiv",
-  archiveText: "-"
+  events: [
+    { date: "22.08.–11.12.2026", title: "Black & White Fotoausstellung", location: "KVHS Wittingen" },
+    { date: "06.11.2026", title: "UNSAHof Markttag", location: "" },
+    { date: "07.11.2026", title: "Wundermarkt", location: "Seershausen" }
+  ]
 };
