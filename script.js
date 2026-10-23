@@ -13,7 +13,7 @@ function initMenu(){
   });
 }
 
-const ASSET_VERSION='20261021k';
+const ASSET_VERSION='20261021o';
 const imagePath=name=>`assets/images/${name}?v=${ASSET_VERSION}`;
 const imagePair=name=>({jpg:imagePath(`${name}.jpg`),webp:imagePath(`${name}.webp`)});
 
@@ -85,7 +85,12 @@ function loadPage(page,c){
     const textPage=document.querySelector('.text-page');if(textPage){const hs=textPage.querySelectorAll('h2'),ps=textPage.querySelectorAll('p');if(hs[0])hs[0].textContent=c.formatTitle;if(ps[0])ps[0].textContent=c.formatText;if(hs[1])hs[1].textContent=c.orderTitle;if(ps[1])ps[1].textContent=c.orderText;}
     const captions=document.querySelectorAll('.inside-grid figcaption');if(captions[0]?.querySelector('span'))captions[0].querySelector('span').textContent=c.preview1Caption;if(captions[1]?.querySelector('span'))captions[1].querySelector('span').textContent=c.preview2Caption;
   }
-  if(page==='exhibitions'){const hs=document.querySelectorAll('.text-page h2'),ps=document.querySelectorAll('.text-page p');if(hs[0])hs[0].textContent=c.currentYear;if(ps[0])ps[0].textContent=c.currentText;if(hs[1])hs[1].textContent=c.archiveTitle;if(ps[1])ps[1].textContent=c.archiveText;}
+  if(page==='exhibitions'){
+    const list=document.querySelector('.event-list');
+    if(list&&Array.isArray(c.events)){
+      list.innerHTML=c.events.map(event=>`<article class="event-item"><div class="event-date">${event.date}</div><div class="event-details"><h3>${event.title}</h3>${event.location?`<p>${event.location}</p>`:''}</div></article>`).join('');
+    }
+  }
   if(page==='about'){const sections=document.querySelectorAll('.text-page h2'),texts=document.querySelectorAll('.text-page h2 + p');c.sections.forEach((section,i)=>{if(sections[i])sections[i].textContent=section.title;if(texts[i])texts[i].textContent=section.text;});}
   if(page==='contact'){const block=document.querySelector('.contact-block');if(block)block.innerHTML=`<div class="contact-item"><span>E-Mail</span><a href="mailto:${c.email}">${c.email}</a></div><div class="contact-item"><span>Instagram</span><a href="https://www.instagram.com/felixwach.fotografie/" target="_blank" rel="noopener noreferrer">@felixwach.fotografie</a></div>`;const note=document.querySelector('.text-page p');if(note)note.textContent=c.note;const purchase=document.querySelector('.purchase-note');if(purchase)purchase.textContent=c.purchase||'';}
   if(page==='impressum'){const ps=document.querySelectorAll('.text-page p'),note=document.querySelector('.legal-note');if(note)note.innerHTML=c.legalNote?`<strong>Hinweis:</strong> ${c.legalNote}`:'';if(ps[0])ps[0].innerHTML=c.provider.replace(/\\n/g,'<br>');if(ps[1])ps[1].innerHTML=`${c.email}${c.phone?`<br>${c.phone}`:''}`;}
