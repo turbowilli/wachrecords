@@ -2,8 +2,8 @@
 const siteContent = {
   brand: "Felix Wach – Natur vor der Tür",
   navigation: [
-    { label: "Arbeiten", href: "work.html" },
-    { label: "Publikation", href: "magazine.html" },
+    { label: "Galerie", href: "work.html" },
+    { label: "Arbeiten", href: "magazine.html" },
     { label: "Ausstellungen", href: "exhibitions.html" },
     { label: "Über mich", href: "about.html" },
     { label: "Kontakt", href: "contact.html" }
