@@ -1,8 +1,8 @@
-/* WACH RECORDS — Arbeiten */
+/* WACH RECORDS — Galerie */
 const workContent = {
-  kicker: "Felix Wach",
-  title: "Ausgewählte Arbeiten",
-  intro: "Alle Fotografien sind in verschiedenen Größen und mit unterschiedlichen Rahmen erhältlich.",
+  kicker: "Fotografien von Felix Wach",
+  title: "Galerie",
+  intro: "Eine Auswahl meiner Naturfotografien – von Tierbegegnungen und Landschaften bis zu kleinen Details und besonderen Lichtstimmungen.",
   items: [
     { image: "hero-forest", title: "Wald", number: "01", alt: "Abstrakte Waldaufnahme" },
     { image: "fog-tree", title: "Landschaft", number: "02", alt: "Baum im Nebel" },
